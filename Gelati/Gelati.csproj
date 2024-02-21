@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="doc\**" />
+    <EmbeddedResource Remove="doc\**" />
+    <None Remove="doc\**" />
+    <Page Remove="doc\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Gelati.csv" />
+    <None Remove="Ingredienti.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Gelati.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="Ingredienti.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+  </ItemGroup>
+
+</Project>
